@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6; /* Soft light grey */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centers the app vertically */
+}
+
+/* 2. Layout Container */
+.app-container {
+    background: white;
+    width: 90%;
+    max-width: 400px; /* Responsive: won't get too wide on desktop */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* 3. Input Section */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+input#task-input {
+    flex: 1; /* Takes up remaining space */
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input#task-input:focus {
+    border-color: #4a90e2; /* Blue highlight when typing */
+}
+
+button#add-btn {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button#add-btn:hover {
+    background-color: #357abd; /* Darkens on hover */
+}
+
+/* 4. Filter Buttons */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* 5. The List Styling */
+#todo-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+/* We will create these <li> items via JavaScript later */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* 6. Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+button#clear-btn {
+    background: none;
+    border: none;
+    color: #e74c3c; /* Red for 'danger' actions */
+    cursor: pointer;
+}
+
+button#clear-btn:hover {
+    text-decoration: underline;
+}
