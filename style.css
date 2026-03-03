@@ -13,7 +13,7 @@ body {
     min-height: 100vh; /* Centers the app vertically */
 }
 
-/* 2. Layout Container */
+/* Layout Container */
 .app-container {
     background: white;
     width: 90%;
@@ -29,7 +29,7 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-/* 3. Input Section */
+/* Input Section */
 .input-group {
     display: flex;
     gap: 10px;
@@ -64,7 +64,7 @@ button#add-btn:hover {
     background-color: #357abd; /* Darkens on hover */
 }
 
-/* 4. Filter Buttons */
+/* Filter Buttons */
 .filters {
     display: flex;
     justify-content: space-between;
@@ -85,13 +85,13 @@ button#add-btn:hover {
     font-weight: bold;
 }
 
-/* 5. The List Styling */
+/* The List Styling */
 #todo-list {
     list-style: none;
     margin-bottom: 1.5rem;
 }
 
-/* We will create these <li> items via JavaScript later */
+/* I will create these <li> items via JavaScript later */
 .todo-item {
     display: flex;
     align-items: center;
@@ -105,7 +105,7 @@ button#add-btn:hover {
     color: #aaa;
 }
 
-/* 6. Footer Section */
+/* Footer Section */
 .footer {
     display: flex;
     justify-content: space-between;
