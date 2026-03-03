@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="todo-container">
+        <header>
+            <h1>Smart Tasks</h1>
+            <p id="date-display"></p>
+        </header>
+
+        <section class="input-section">
+            <input type="text" id="todo-input" placeholder="What needs to be done?" maxlength="50">
+            <button id="add-btn">Add Task</button>
+        </section>
+
+        <nav class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </nav>
+
+        <main>
+            <ul id="todo-list">
+                </ul>
+        </main>
+
+        <footer>
+            <span id="items-left">0 items left</span>
+            <button id="clear-completed">Clear Completed</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
