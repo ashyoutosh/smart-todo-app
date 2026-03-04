@@ -1,50 +1,39 @@
-// Selectors
-const taskInput = document.getElementById('task-input');
-const addBtn = document.getElementById('add-btn');
-const todoList = document.getElementById('todo-list');
+// Select elements from the DOM
+const taskInput = document.getElementById("todo-input");
+const addBtn = document.getElementById("add-btn");
+const todoList = document.getElementById("todo-list");
+
 
 // Function to add a task
 function addTask() {
+
     const taskText = taskInput.value.trim();
 
-    // Prevent adding empty tasks
+    // Prevent empty tasks
     if (taskText === "") return;
 
-    // Create the task element (li)
-    const li = document.createElement('li');
-    li.classList.add('todo-item');
-    
-    // Set the internal structure of the li
-    li.innerHTML = `
-        <span>${taskText}</span>
-        <button class="delete-btn">Delete</button>
-    `;
+    // Create new list item
+    const li = document.createElement("li");
 
-    // Append to the list and clear input
+    li.textContent = taskText;
+
+    // Add it to the task list
     todoList.appendChild(li);
+
+    // Clear input field
     taskInput.value = "";
 }
 
-// Listen for clicks on the Add button
-addBtn.addEventListener('click', addTask);
 
-// Listen for the "Enter" key
-taskInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
+// Add task when button is clicked
+addBtn.addEventListener("click", addTask);
+
+
+// Add task when Enter key is pressed
+taskInput.addEventListener("keypress", function(e) {
+
+    if (e.key === "Enter") {
         addTask();
     }
-});
 
-// Functionality to delete or toggle tasks
-todoList.addEventListener('click', (e) => {
-    // 1. Check if the clicked element is the delete button
-    if (e.target.classList.contains('delete-btn')) {
-        const itemToRemove = e.target.parentElement;
-        itemToRemove.remove();
-    }
-    
-    // 2. Toggle completion (click on the text itself)
-    if (e.target.tagName === 'SPAN') {
-        e.target.parentElement.classList.toggle('completed');
-    }
 });
